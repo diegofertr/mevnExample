@@ -1136,6 +1136,11 @@ module.exports = Cancel;
       this.axios.get('/item').then(res => {
         this.items = res.data;
       }).catch(err => console.log(err));
+    },
+    deleteItem(id) {
+      this.axios.delete(`/item/${id}`).then(res => {
+        this.items.splice(id, 1);
+      }).catch(err => console.log(err));
     }
   }
 });
@@ -13100,7 +13105,25 @@ var render = function() {
             _vm._v(" "),
             _c("td", [_vm._v(" " + _vm._s(item.price) + " ")]),
             _vm._v(" "),
-            _vm._m(1, true)
+            _c("td", [
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-danger",
+                  attrs: { href: "#" },
+                  on: {
+                    click: function($event) {
+                      _vm.deleteItem(item._id)
+                    }
+                  }
+                },
+                [_vm._v("Eliminar")]
+              ),
+              _vm._v(" "),
+              _c("a", { staticClass: "btn btn-dark", attrs: { href: "#" } }, [
+                _vm._v("Actualizar")
+              ])
+            ])
           ])
         })
       )
@@ -13121,20 +13144,6 @@ var staticRenderFns = [
         _c("th", [_vm._v("Precio")]),
         _vm._v(" "),
         _c("th", [_vm._v("Operaciones")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("a", { staticClass: "btn btn-danger", attrs: { href: "#" } }, [
-        _vm._v("Eliminar")
-      ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "btn btn-dark", attrs: { href: "#" } }, [
-        _vm._v("Actualizar")
       ])
     ])
   }

@@ -16,7 +16,7 @@
           <td> {{ item.name }} </td>
           <td> {{ item.price }} </td>
           <td>
-            <a href="#" class="btn btn-danger">Eliminar</a>
+            <a href="#" class="btn btn-danger" v-on:click="deleteItem(item._id)">Eliminar</a>
             <a href="#" class="btn btn-dark">Actualizar</a>
           </td>
         </tr>
@@ -41,6 +41,13 @@ export default {
       this.axios.get('/item')
         .then(res => {
           this.items = res.data;
+        })
+        .catch(err => console.log(err));
+    },
+    deleteItem (id) {
+      this.axios.delete(`/item/${id}`)
+        .then(res => {
+          this.items.splice(id, 1);
         })
         .catch(err => console.log(err));
     }
