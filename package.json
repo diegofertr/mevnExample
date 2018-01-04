@@ -1,0 +1,14 @@
+{
+  "name": "mevn-stack",
+  "version": "1.0.0",
+  "description": "Crud application with Mongo+Express+Vue+Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MEVN-stack"
+  ],
+  "author": "Diego Ticona <github.com/diegofertr>",
+  "license": "MIT"
+}
