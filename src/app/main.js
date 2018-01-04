@@ -8,12 +8,20 @@ Vue.use(VueAxios, axios)
 
 import App from './App.vue'
 import DisplayItem from './components/DisplayItem.vue'
+import CreateItem from './components/CreateItem.vue'
 
-const routes = [{
-  name: 'DisplayItem',
-  path: '/',
-  component: DisplayItem
-}]
+const routes = [
+  {
+    name: 'DisplayItem',
+    path: '/',
+    component: DisplayItem
+  },
+  {
+    name: 'CreateItem',
+    path: '/create/item',
+    component: CreateItem
+  }
+]
 
 const router = new VueRouter({mode: 'history', routes: routes})
 new Vue(Vue.util.extend({router}, App)).$mount('#app')
