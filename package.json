@@ -4,7 +4,9 @@
   "description": "Crud application with Mongo+Express+Vue+Node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --colors",
+    "build:watch": "webpack -w --colors",
+    "start": "node src/server.js"
   },
   "keywords": [
     "MEVN-stack"
@@ -17,5 +19,17 @@
     "express": "^4.16.2",
     "mongoose": "^5.0.0-rc1",
     "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "axios": "^0.17.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.7",
+    "vue": "^2.5.13",
+    "vue-axios": "^2.0.2",
+    "vue-loader": "^13.6.2",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.10.0"
   }
 }
