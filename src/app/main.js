@@ -9,6 +9,7 @@ Vue.use(VueAxios, axios)
 import App from './App.vue'
 import DisplayItem from './components/DisplayItem.vue'
 import CreateItem from './components/CreateItem.vue'
+import EditItem from './components/EditItem.vue'
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
     name: 'CreateItem',
     path: '/create/item',
     component: CreateItem
+  },
+  {
+    name: 'EditItem',
+    path: '/edit/item/:id',
+    component: EditItem
   }
 ]
 

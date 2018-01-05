@@ -3,7 +3,14 @@ const router = express.Router();
 
 const Item = require('../models/Item');
 
-// get data- /item
+// get item by id
+router.get('/:id', (req, res, next) => {
+  Item.findById(req.params.id, (err, item) => {
+    res.json(item);
+  })
+});
+
+// get all data- /item
 router.get('/', (req, res) => {
   Item.find((err, items) => {
     if (err) {

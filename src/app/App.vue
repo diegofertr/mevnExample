@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <h1> Vue2 Funcionando</h1>
+    <h1> Vue2 CRUD.Example</h1>
     <router-link :to="{ name: 'CreateItem' }" class="btn btn-primary">
       Crear Item
     </router-link>

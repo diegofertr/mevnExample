@@ -17,7 +17,9 @@
           <td> {{ item.price }} </td>
           <td>
             <a href="#" class="btn btn-danger" v-on:click="deleteItem(item._id)">Eliminar</a>
-            <a href="#" class="btn btn-dark">Actualizar</a>
+            <router-link :to="{ name: 'EditItem', params: {id: item._id} }" class="btn btn-dark">
+              Actualizar
+            </router-link>
           </td>
         </tr>
       </tbody>
