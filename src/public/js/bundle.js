@@ -13165,7 +13165,7 @@ var render = function() {
           staticClass: "btn btn-primary",
           attrs: { to: { name: "CreateItem" } }
         },
-        [_vm._v("\n    Crear Item\n  ")]
+        [_vm._v("\n    Crear Item Nuevo\n  ")]
       ),
       _vm._v(" "),
       _c(

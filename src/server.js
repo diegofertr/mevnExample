@@ -25,7 +25,7 @@ app.use(bodyParser.json());
  * routes
  */
 app.use('/item', itemRoutes);
-app.use('/user', registerRoutes);
+app.use('/user', userRoutes);
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
