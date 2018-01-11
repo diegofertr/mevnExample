@@ -10,6 +10,8 @@ import App from './App.vue'
 import DisplayItem from './components/DisplayItem.vue'
 import CreateItem from './components/CreateItem.vue'
 import EditItem from './components/EditItem.vue'
+import RegisterUser from './components/RegisterUser.vue'
+import DisplayUser from './components/DisplayUser.vue'
 
 const routes = [
   {
@@ -26,6 +28,16 @@ const routes = [
     name: 'EditItem',
     path: '/edit/item/:id',
     component: EditItem
+  },
+  {
+    name: 'RegisterUser',
+    path: '/register/user',
+    component: RegisterUser
+  },
+  {
+    name: 'DisplayUser',
+    path: '/user',
+    component: DisplayUser
   }
 ]
 

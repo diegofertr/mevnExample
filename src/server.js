@@ -5,10 +5,11 @@ const express = require('express');
 const app = express();
 
 const itemRoutes = require('./routes/Item');
+const userRoutes = require('./routes/User');
 
 // connecting to the database
 const db = require('mongoose');
-db.connect('mongodb://localhost:27017/mevn-stack')
+db.connect('mongodb://192.168.1.10:27017/mevn-stack')
   .then(() => console.log('db connected'))
   .catch(err => console.log(err));
 
@@ -24,7 +25,7 @@ app.use(bodyParser.json());
  * routes
  */
 app.use('/item', itemRoutes);
-
+app.use('/user', registerRoutes);
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
